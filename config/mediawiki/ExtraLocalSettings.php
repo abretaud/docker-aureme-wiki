@@ -38,3 +38,5 @@ $wgFooterIcons['poweredby']['aureme'] = array(
         "url" => "http://aureme.genouest.org/",
         "alt" => "Powered by AuReMe"
 );
+
+enableSemantics( getenv('MEDIAWIKI_SERVER') . '/', true );
