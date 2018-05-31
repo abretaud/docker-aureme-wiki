@@ -10,7 +10,8 @@ RUN curl -o /tmp/composer-setup.php https://getcomposer.org/installer \
     && php /tmp/composer-setup.php --no-ansi --install-dir=/usr/local/bin --filename=composer --snapshot \
     && rm -f /tmp/composer-setup.*
 
-RUN composer require mediawiki/semantic-media-wiki "~2.5" --update-no-dev
+RUN composer require mediawiki/semantic-media-wiki "~2.5" --update-no-dev && \
+    composer clearcache
 
 COPY aureme_logo.png /var/www/mediawiki/resources/assets/aureme_logo.png
 COPY config/mediawiki/ExtraLocalSettings.php /var/www/mediawiki/ExtraLocalSettings.php
