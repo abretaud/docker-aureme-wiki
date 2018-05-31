@@ -15,6 +15,3 @@ RUN composer require mediawiki/semantic-media-wiki "~2.5" --update-no-dev && \
 
 COPY aureme_logo.png /var/www/mediawiki/resources/assets/aureme_logo.png
 COPY config/mediawiki/ExtraLocalSettings.php /var/www/mediawiki/ExtraLocalSettings.php
-
-# temp!!
-COPY docker-entrypoint.sh /docker-entrypoint.sh
